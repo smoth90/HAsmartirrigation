@@ -19,13 +19,6 @@ blueprint:
       selector:
         entity:
           domain: weather
-    rain_sensor:
-      name: Rain Sensor (Optional)
-      description: Rain sensor to skip irrigation when raining
-      required: false
-      selector:
-        entity:
-          domain: binary_sensor
     temperature_threshold:
       name: Temperature Threshold
       description: Skip irrigation if temperature is below this value
