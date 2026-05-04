@@ -113,6 +113,7 @@ action:
             value_template: "{{ trigger.platform == 'state' }}"
         sequence:
           - variables:
+              smart_irrigation_entity: !input smart_irrigation_entity
               duration: "{{ trigger.to_state.state | int }}"
               min_duration: !input minimum_duration
           - condition: template
