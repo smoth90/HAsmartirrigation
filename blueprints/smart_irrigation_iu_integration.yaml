@@ -63,6 +63,7 @@ action:
             value_template: "{{ trigger.platform == 'event' and trigger.event.event_type == 'smart_irrigation_start_irrigation_all_zones' }}"
         sequence:
           - variables:
+              smart_irrigation_entity: !input smart_irrigation_entity
               duration: "{{ states(smart_irrigation_entity) | int }}"
               min_duration: !input minimum_duration
               max_duration: !input maximum_duration
