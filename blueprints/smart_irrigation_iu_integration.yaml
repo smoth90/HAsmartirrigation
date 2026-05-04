@@ -44,9 +44,8 @@ blueprint:
           unit_of_measurement: seconds
 
 trigger:
-  - platform: state
-    entity_id: !input smart_irrigation_entity
-    attribute: duration
+  - entity_id: !input smart_irrigation_entity
+    trigger: state
   - platform: event
     event_type: smart_irrigation_start_irrigation_all_zones
   - platform: event
