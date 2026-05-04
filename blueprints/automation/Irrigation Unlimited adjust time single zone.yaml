@@ -41,7 +41,7 @@ condition:
 action:
   - service: irrigation_unlimited.adjust_time
     data:
-      actual: "{{ timedelta(seconds=states('duration') | int(0)) }}"
+      actual: "{{ timedelta(seconds=states(duration) | int(0)) }}"
       # 1. Adjust a single zone.
       entity_id: !input unlimited_zone
 
