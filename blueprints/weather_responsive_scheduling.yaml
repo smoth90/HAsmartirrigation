@@ -102,11 +102,11 @@ condition:
 action:
   - variables:
       current_month: "{{ now().month }}"
+      weather_entity: !input weather_entity
       current_temp: "{{ state_attr(weather_entity, 'temperature') | float }}"
       current_wind: "{{ state_attr(weather_entity, 'wind_speed') | float }}"
       temp_threshold: !input temperature_threshold
       wind_threshold: !input wind_threshold
-      weather_entity: !input weather_entity
       
       # Determine seasonal multiplier
       seasonal_multiplier: >
